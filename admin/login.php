@@ -1,5 +1,18 @@
 <?php
+    if(isset($_POST['btnLogin'])) //login request
+    {
+        $email = $_POST["email"]; //value of name attribute in the form control
+        $password = $_POST["password"];
 
+        $hashCode = "$2y$10\$MOD.cgQQ79KSB2FjL82dX.NfbphQRz.15YGokHDEGCWRPVir24mo.";
+
+        if(password_verify($password, $hashCode))// plain text, hash code
+        {
+            echo "Login Success!";
+        }else{
+            echo "Login Fail!";
+        }
+    }
 
 ?>
 
@@ -24,10 +37,30 @@
             ?>
         </div>
         <div class="row">
-            <div class="col-md-6">
-                
+            <div class="col-md-6 mx-auto">
+                <form action="login.php" method="post" class="form mt-5">
+                    <fieldset>
+                        <legend>Admin Login</legend>
+
+                        <div class="mb-2">
+                            <label for="" class="form-lable">Email</label>
+                            <input type="email" name="email" class="form-control">
+                        </div>
+
+                        <div class="mb-2">
+                            <label for=""  class="form-lable">Password</label>
+                            <input type="password" name="password" class="form-control">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary mt-2" name="btnLogin">
+                            Login
+                        </button>
+
+                    </fieldset>
+                </form>
             </div>
         </div>
+
     </div>
 </body>
 </html>

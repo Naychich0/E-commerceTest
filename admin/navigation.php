@@ -12,7 +12,7 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#">
-        <img src="images/logo.avif" style="width:80px; height:80px;" alt="">
+        <img src="images/logo.avif" style="width:90px; height:90px;" alt="">
       </a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
